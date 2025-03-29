@@ -1,0 +1,153 @@
+\chapter{Introduction}
+Web applications have become ubiquitous in modern software systems, powering everything from e-commerce platforms to social media networks. As these applications grow increasingly complex, there is a pressing need for effective methods to analyze and understand their behavior, especially in black-box scenarios where source code access is limited. Traditional approaches like static and dynamic analysis often struggle to scale to the size and complexity of modern web applications \cite{gan2013anomaly}.
+
+In recent years, artificial intelligence and machine learning techniques have shown great promise in tackling complex software engineering tasks. Deep learning models in particular have demonstrated impressive capabilities in areas like code understanding, bug detection, and program synthesis \cite{mohammed2021effective}. However, applying these techniques to web application analysis presents unique challenges, as the behavior of web apps is often dependent on complex user interactions and server-side logic that is opaque to external observers.
+
+This thesis proposes a novel AI-driven framework for analyzing web applications using only interaction data collected from black-box testing. By leveraging state-of-the-art deep learning architectures like transformers and graph neural networks, our approach aims to build comprehensive models of web application behavior without requiring access to source code or internal system state \cite{ding2022velvet}.
+
+Specifically, we focus on using ensemble learning techniques to combine multiple AI models and capture different aspects of web application structure and functionality. Our framework incorporates both sequence-based models to understand temporal patterns in user interactions, as well as graph-based models to capture the underlying structure of web application components and their relationships \cite{mohammed2021effective}.
+ 
+ The key contributions of this work include:
+
+\begin{enumerate}
+\item An ensemble learning architecture for web application analysis
+\item Techniques for extracting meaningful features from black-box web interaction data
+\item Methods for translating learned models into actionable insights for developers and testers
+\item Evaluation on real-world web applications demonstrating the effectiveness of our approach
+\end{enumerate}
+
+By enabling more comprehensive analysis of web applications without source code access, this work has the potential to significantly improve testing, debugging, and understanding of complex web-based systems. The AI-driven techniques developed here may also generalize to other domains involving analysis of interactive software systems.
+
+\section{Background}
+The rapid proliferation of web applications has revolutionized how businesses interact with customers and deliver services. However, this growth has also led to an increased attack surface for cybercriminals. According to recent industry reports, web applications remain one of the most targeted assets by attackers, with 46\% of applications containing high-severity vulnerabilities \cite{gan2013anomaly}. This alarming statistic underscores the critical need for robust and scalable methods to identify and mitigate security risks in web applications.
+
+Traditional approaches to web application security analysis can be broadly categorized into static analysis, dynamic analysis, and manual penetration testing. Static analysis examines the source code or compiled binaries of an application without executing it, looking for potential vulnerabilities based on known patterns and rules. While comprehensive, static analysis often produces a high number of false positives and may miss complex, runtime-dependent vulnerabilities.
+
+Dynamic analysis involves executing the application and observing its behavior during runtime. This approach can uncover vulnerabilities that only manifest during execution but may suffer from limited code coverage and can be resource-intensive for large applications. Manual penetration testing, performed by skilled security professionals, can be highly effective but is time-consuming, expensive, and does not scale well to the rapid development cycles of modern web applications.
+
+In recent years, artificial intelligence and machine learning techniques have shown great promise in tackling complex software engineering tasks. Deep learning models, in particular, have demonstrated impressive capabilities in areas like code understanding, bug detection, and program synthesis \cite{mohammed2021effective}. These advancements have opened up new possibilities for analyzing web applications, potentially overcoming some of the limitations of traditional approaches.
+
+However, applying these techniques to web application analysis presents unique challenges. The behavior of web apps is often dependent on complex user interactions and server-side logic that is opaque to external observers. Additionally, the stateful nature of many web applications and the diversity of technologies used in their implementation make it difficult to develop generalized analysis techniques.
+
+Outpost24, a leading cybersecurity company, recognizes the potential of AI-driven approaches to enhance their web application security offerings. They have commissioned this research to develop a prototype that leverages machine learning techniques for more effective and scalable vulnerability detection. By combining the power of AI with their existing security expertise, Outpost24 aims to provide their clients with more comprehensive and accurate web application security assessments.
+
+This research builds upon recent advancements in AI-driven software analysis, such as the work by Ding et al. on vulnerability localization using ensemble learning techniques \cite{ding2022velvet}. By adapting and extending these approaches to the specific challenges of web application security, we aim to develop a novel framework that can significantly improve the accuracy and efficiency of vulnerability detection in complex web applications.
+
+The collaboration with Outpost24 provides a unique opportunity to validate the developed prototype in real-world scenarios and ensure its practical applicability in the cybersecurity industry. This partnership also allows us to leverage Outpost24's extensive domain knowledge and datasets, enhancing the relevance and impact of our research outcomes.
+    
+\section{Problem}
+The rapid growth and complexity of modern web applications have created significant challenges in identifying and mitigating security vulnerabilities. Traditional approaches to vulnerability detection and localization face several limitations when applied to large-scale web applications:
+
+\begin{enumerate}
+\item \textbf{Scalability:} Static and dynamic analysis tools struggle to efficiently analyze the vast codebases of modern web applications, often resulting in long processing times or incomplete coverage.
+
+\item \textbf{Granularity:} Many current vulnerability detection techniques operate at the function or file level, requiring developers to manually inspect large sections of code to locate the specific vulnerable statements.
+
+\item \textbf{Adaptability:} The constantly evolving nature of web technologies and attack vectors makes it challenging for rule-based systems to keep pace with new vulnerability patterns.
+\end{enumerate}
+
+To address these challenges, this thesis proposes a novel AI-driven approach for locating vulnerable statements in web applications using interaction data in a black-box framework. The key research questions we aim to answer are:
+
+\begin{enumerate}
+\item Can an ensemble of deep learning models effectively capture both local and global context to improve vulnerability localization accuracy?
+
+text
+\item How can we leverage limited real-world vulnerability data to train models that generalize well to diverse web application architectures?
+
+\item To what extent can AI-driven techniques reduce false positives and false negatives compared to traditional static analysis tools?
+
+\item Can the proposed approach provide actionable insights to developers for efficiently addressing identified vulnerabilities?
+\end{enumerate}
+
+By exploring these questions, we seek to determine the feasibility and effectiveness of using AI-driven techniques to enhance web application security analysis. The potential impact of this research includes:
+
+\begin{itemize}
+\item Improved accuracy in identifying and locating vulnerabilities, reducing the time and effort required for security audits.
+\item Enhanced scalability for analyzing large and complex web applications.
+\item Better adaptability to new and evolving vulnerability patterns.
+\item More actionable insights for developers, facilitating faster remediation of security issues.
+\end{itemize}
+\section{Purpose}
+This thesis is undertaken as part of the Bachelor's degree program in Information and Communication Technology at KTH Royal Institute of Technology. The primary purpose of this research is to develop and evaluate an AI-driven prototype for locating vulnerable statements in web applications using interaction data in a black-box framework.
+
+The specific objectives of this thesis are:
+
+\begin{enumerate}
+\item To design and implement an ensemble learning architecture that combines transformer-based models and graph neural networks for improved vulnerability detection in web applications.
+
+text
+\item To develop techniques for extracting meaningful features from black-box web interaction data that can be used to train the AI models effectively.
+
+\item To evaluate the performance of our prototype against traditional static analysis tools in terms of accuracy, scalability, and adaptability to new vulnerability patterns.
+
+\item To provide actionable insights and recommendations for developers based on the vulnerability analysis results.
+
+\item To contribute to the field of web application security by demonstrating the feasibility and effectiveness of AI-driven approaches in vulnerability detection and localization.
+\end{enumerate}
+
+This research aims to address the growing challenges in web application security by leveraging state-of-the-art machine learning techniques. By completing this thesis, we seek to not only fulfill the requirements of our bachelor's degree but also to make a meaningful contribution to the cybersecurity industry, particularly in collaboration with our industry partner, Outpost24.
+
+\section{Goals}
+The primary goal of this thesis is to develop an effective AI-driven approach for analyzing web applications using interaction data in a black-box framework. Specifically, we aim to:
+
+\begin{enumerate}
+
+\item Design and implement a novel ensemble learning architecture, that combines transformer-based models and graph neural networks to capture both local and global context for vulnerability detection and localization in web applications.
+
+\item Develop techniques for extracting meaningful features from black-box web interaction data that can be used to train the AI models effectively.
+
+\item Evaluate the performance of our prototype against traditional static analysis tools for vulnerability detection and localization.
+
+\item Provide actionable insights and recommendations for developers based on the vulnerability analysis results to improve web application security.
+
+\item Contribute to the field of web application security by demonstrating the feasibility and effectiveness of AI-driven approaches for vulnerability detection and localization without source code access.
+
+\end{enumerate}
+
+By achieving these goals, we aim to develop a practical and scalable solution that can significantly enhance the security analysis of modern web applications, particularly in scenarios where source code access is limited or unavailable.
+
+\section{Research Methodology}
+
+
+\section{Delimitation}
+
+
+\section{Structure of the thesis}
+The remainder of this thesis is organized as follows:
+
+\begin{itemize}
+
+\item \textbf{Chapter 2: Background and Related Work} provides a comprehensive literature review, covering existing approaches to web application analysis, relevant machine learning techniques, and current challenges in the field.
+
+\item \textbf{Chapter 3: Methodolgy} details the design and architecture of our proposed AI-driven analysis framework including:
+\begin{itemize}
+\item Data collection methodology
+\item Feature extraction techniques
+\item Ensemble model design 
+\item Pre-training and fine-tuning approach
+\end{itemize}
+
+\item \textbf{Chapter 4: Implementation} presents the implementation details of our framework, including:
+\begin{itemize}
+\item Specific machine learning models used
+\item Training procedures
+\item Integration of different components
+\end{itemize}
+
+\item \textbf{Chapter 5: Findings} describes our evaluation methodology, including:
+\begin{itemize}
+\item Datasets used
+\item Baseline comparisons
+\item Performance metrics
+\end{itemize}
+
+\item \textbf{Chapter 6: Results and Discussion} presents and analyzes the results of our experiments, including:
+\begin{itemize}
+\item Effectiveness of our approach in various scenarios
+\item Comparison to existing techniques
+\item Ablation studies on different components
+\end{itemize}
+
+\item \textbf{Chapter 7: Conclusion} summarizes the key contributions, discusses limitations, and outlines directions for future research in this area.
+
+\end{itemize}

@@ -1,0 +1,102 @@
+\documentclass[5pt, a4paper]{report}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{esvect}
+\usepackage{multicol}
+\usepackage{blindtext}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{txfonts}
+\usepackage[style=ieee]{biblatex}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{esint}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{svg}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\setlist[itemize]{noitemsep, topsep=1pt}
+
+% Change the header of the article to include chapter name and page number
+% \fancyhf{}
+% \fancyhead[R]{%
+%    % We want italics
+%    \itshape
+%    % The chapter number only if it's greater than 0
+%    \ifnum\value{chapter}>0 \chaptername\ \thechapter. \fi
+%    % The chapter title
+%    \leftmark}
+% \fancyfoot[C]{\thepage}
+
+% \fancypagestyle{plain}{
+%   \renewcommand{\headrulewidth}{0pt}
+%   \fancyhf{}
+%   \fancyfoot[C]{\thepage}
+% }
+
+%% Declare some variables that include the title subtitle and authors of the thesis
+\newcommand{\titletext}{AI-Driven Analysis of Web Applications Using Interaction Data in a Black-Box Framework}
+\newcommand{\subtitletext}{This is the subtitle in the language of the thesis}
+\newcommand{\authora}{Praanto Samadder}
+\newcommand{\authorb}{Rushil Garg}
+
+%% Change the font size for the article
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\small\bfseries}
+\titleformat*{\subsubsection}{\small\bfseries}
+
+
+% Change the font family of headers to meet the template requirement
+\titleformat{\section}
+  {\normalfont\sffamily\Large\bfseries}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\sffamily\large\bfseries}
+  {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\normalfont\sffamily\normalsize\bfseries}
+  {\thesubsection}{1em}{}
+
+\titleformat{\chapter}[display]
+  {\normalfont\sffamily\huge\bfseries}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+% Change the margin of the page
+\newgeometry{vmargin={15mm}, hmargin={22mm}}
+
+% Add reference source
+\addbibresource{references/ref.bib}
+
+
+\begin{document}
+
+% Title page
+\input{0_title_page}
+
+% Use Roman numbering for the abstract and acknowledgement
+\pagenumbering{Roman}
+\input{1_abstract}
+\input{2_acknowledgements}
+\input{3_tableofcontents}
+
+
+% Use Arabic numbering for the rest of the document
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+\input{4_introduction/4_introduction}
+\input{5_background/5_background}
+\input{6_methods/6_method}
+\input{7_findings/7_findings}
+\input{8_results/8_results}
+\input{9_discussions/9_discussion}
+
+\printbibliography
+
+\end{document}
